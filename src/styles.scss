@@ -1,0 +1,20 @@
+
+html, body {
+  padding: .5rem 0;
+  background-color: lighten(#424242, 25);
+  scroll-behavior: smooth;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-15deg);
+  }
+  40%, 80% {
+    transform: rotate(+15deg);
+  }
+}
