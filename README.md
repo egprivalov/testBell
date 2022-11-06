@@ -1,6 +1,7 @@
-# TestBell
+# Bell Integrator Test Task
 ___
-Тестовое задание для компании Bell Integrator.
+Тестовое задание для компании Bell Integrator.  
+Текущая версия доступна на: [Bell Test](https://test-bell.netlify.app/)
 ## Использовались:
 Angular-Material, ngRx, RxJS, Angular Reactive Forms.  
 Прекомпилятор css: SCSS.  
