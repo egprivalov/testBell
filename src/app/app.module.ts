@@ -19,13 +19,13 @@ import {MatIconModule} from "@angular/material/icon";
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { EffectsModule } from '@ngrx/effects';
 import {MatExpansionModule} from "@angular/material/expansion";
-import {MatDividerModule} from "@angular/material/divider";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatInputModule} from "@angular/material/input";
-import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {favouriteReducer, loadingReducer, pageReducer} from "../store/store.reducers";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -47,12 +47,12 @@ import {favouriteReducer, loadingReducer, pageReducer} from "../store/store.redu
     MatIconModule,
     StoreModule.forRoot({favourite: favouriteReducer, loading: loadingReducer, page: pageReducer}, {}),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
-    EffectsModule.forRoot([]),
     MatExpansionModule,
-    MatDividerModule,
     MatProgressSpinnerModule,
     MatInputModule,
-    MatAutocompleteModule
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

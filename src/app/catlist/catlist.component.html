@@ -1,10 +1,28 @@
 <div class="container">
+  <div class="container container--paginator">
+    <button mat-fab color="accent"
+            [disabled]="page <= 1"
+            (click)="page = page - 1">
+      <mat-icon>
+        chevron_left
+      </mat-icon>
+    </button>
+
+    <button mat-fab color="accent"
+            [disabled]="page >= catList.length / amountOnPage"
+            (click)="page = page + 1">
+      <mat-icon>
+        chevron_right
+      </mat-icon>
+    </button>
+  </div>
+
   <mat-spinner mode="indeterminate" class="container--loading-spinner"
                *ngIf="loading; else list"
   ></mat-spinner>
   <ng-template #list>
-    <app-catcard *ngFor="let cat of catList"
-                 [cat]="cat"
-    ></app-catcard>
+    <app-catcard
+      *ngFor="let cat of catList.slice((page-1)*amountOnPage, page*amountOnPage)"
+      [cat]="cat"></app-catcard>
   </ng-template>
 </div>

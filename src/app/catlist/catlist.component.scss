@@ -9,5 +9,15 @@
     margin: auto;
     top: 40%;
   }
+
+  &--paginator {
+    position: fixed;
+    left: 0;
+    bottom: 1rem;
+    z-index: 100;
+    flex-wrap: nowrap;
+    font-size: 1.5rem;
+    width: 100%;
+  }
 }
 

@@ -4,13 +4,27 @@
      }">
   <h2><u>Filters</u></h2>
   <div class="filterRow">
-    <h4>Breed: </h4>
+    <strong>Breed:</strong>
     <mat-form-field appearance="standard">
       <mat-label>Enter a breed name...</mat-label>
-      <input matInput>
+      <input matInput [formControl]="breedName">
     </mat-form-field>
   </div>
+
+  <div class="filterRow">
+    <mat-form-field>
+      <strong>Cats on page:</strong>
+      <input type="number" matInput  min="1" [formControl]="onPage" (change) = changeOnPage() >
+    </mat-form-field>
+  </div>
+
+  <div class="filterRow">
+    <mat-checkbox color="primary"
+                  [formControl]="isOnlyFavourite"
+    >Only Favourite</mat-checkbox>
+  </div>
 </div>
+
 <button mat-fab class="filterBarButton" color="primary"
         (click)="openFilterBar()">
   <mat-icon>{{ isFiltersOpen ? "close" : "filter_list" }}</mat-icon>
