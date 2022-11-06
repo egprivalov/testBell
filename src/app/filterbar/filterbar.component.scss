@@ -1,0 +1,44 @@
+@import "src/styles";
+
+.filterContainer{
+  position: fixed;
+  max-width: 250px;
+  min-width: 240px;
+  height: 100%;
+  padding: 1rem;
+  top: 0;
+  right: 100%;
+  transition: 1s;
+  background: $primary-light;
+  color: white;
+  border-right: $primary 2px solid;
+}
+
+.hidden{
+  transform: translateX(+100%);
+}
+
+.filterBarButton {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  animation: wiggle 1s forwards linear;
+
+  &:hover {
+    animation: wiggle 1s forwards infinite;
+  }
+}
+
+.filterRow{
+  display: flex;
+  height: fit-content;
+  align-items: baseline;
+  justify-content: left;
+  gap: 1rem;
+}
+
+
+@media (max-width: 600px) {
+
+}
+

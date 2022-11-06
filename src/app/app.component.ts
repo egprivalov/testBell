@@ -8,7 +8,6 @@ import {ApiImageService} from "./apiimage.service";
 })
 export class AppComponent {
   title = 'testBell';
-  isHided = false;
   constructor(public apiImageService: ApiImageService) {
   }
 }

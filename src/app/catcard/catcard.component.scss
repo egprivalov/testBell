@@ -1,0 +1,17 @@
+.card{
+  min-width: 250px;
+  max-width: 450px;
+  min-height: 700px;
+
+  &--likeButton {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    opacity: .3;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+}

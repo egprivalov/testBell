@@ -1,0 +1,10 @@
+<div class="container">
+  <mat-spinner mode="indeterminate" class="container--loading-spinner"
+               *ngIf="loading; else list"
+  ></mat-spinner>
+  <ng-template #list>
+    <app-catcard *ngFor="let cat of catList"
+                 [cat]="cat"
+    ></app-catcard>
+  </ng-template>
+</div>

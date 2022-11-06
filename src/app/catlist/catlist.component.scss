@@ -1,0 +1,13 @@
+.container{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  &--loading-spinner{
+    position: absolute;
+    margin: auto;
+    top: 40%;
+  }
+}
+

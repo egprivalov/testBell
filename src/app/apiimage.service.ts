@@ -25,7 +25,6 @@ export class ApiImageService {
 
   getBreeds() {
     this.http.get(this.api_url+this.breeds_url, {headers: this.reqHeaders})
-      // .pipe(delay(3000))
       .subscribe(
         (breedlist: any) => {
           let newBreedList: IBreed[] = []

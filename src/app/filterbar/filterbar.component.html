@@ -1,0 +1,17 @@
+<div class = "filterContainer"
+     [ngClass]="{
+        'hidden' : isFiltersOpen
+     }">
+  <h2><u>Filters</u></h2>
+  <div class="filterRow">
+    <h4>Breed: </h4>
+    <mat-form-field appearance="standard">
+      <mat-label>Enter a breed name...</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </div>
+</div>
+<button mat-fab class="filterBarButton" color="primary"
+        (click)="openFilterBar()">
+  <mat-icon>{{ isFiltersOpen ? "close" : "filter_list" }}</mat-icon>
+</button>
